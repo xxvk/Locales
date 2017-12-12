@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Main-->
         <scene sceneID="zhq-Q6-Dnb">
             <objects>
                 <tableViewController id="NBI-NB-XhH" customClass="MainViewController" customModule="Locales" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="NBI-NB-XhH" id="5w3-hb-3Mk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Jpe-X5-b56"/>
+                    <navigationItem key="navigationItem" title="Main" id="Jpe-X5-b56"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgA-Au-As4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

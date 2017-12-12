@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2FC9D61FE00EFB00C15069 /* RegionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2FC9D51FE00EFB00C15069 /* RegionDetailViewController.swift */; };
 		2D7930EC1FDFD05D00007C2F /* Locales.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D7930EB1FDFD05D00007C2F /* Locales.bundle */; };
 		2D7930EE1FDFD55200007C2F /* RegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7930ED1FDFD55200007C2F /* RegionCell.swift */; };
 		2D7930F01FDFD92900007C2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7930EF1FDFD92900007C2F /* MainViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2FC9D51FE00EFB00C15069 /* RegionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDetailViewController.swift; sourceTree = "<group>"; };
 		2D7930EB1FDFD05D00007C2F /* Locales.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Locales.bundle; sourceTree = "<group>"; };
 		2D7930ED1FDFD55200007C2F /* RegionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCell.swift; sourceTree = "<group>"; };
 		2D7930EF1FDFD92900007C2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2DAE12F01FDFB4A6000D6497 /* AppDelegate.swift */,
 				2D7930EF1FDFD92900007C2F /* MainViewController.swift */,
 				2D7930ED1FDFD55200007C2F /* RegionCell.swift */,
+				2D2FC9D51FE00EFB00C15069 /* RegionDetailViewController.swift */,
 				2DAE12F41FDFB4A6000D6497 /* Main.storyboard */,
 				2DAE12F71FDFB4A6000D6497 /* Assets.xcassets */,
 				2DAE12F91FDFB4A6000D6497 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			files = (
 				2D7930EE1FDFD55200007C2F /* RegionCell.swift in Sources */,
 				2DAE13041FDFB4CA000D6497 /* Locales.swift in Sources */,
+				2D2FC9D61FE00EFB00C15069 /* RegionDetailViewController.swift in Sources */,
 				2DAE12F11FDFB4A6000D6497 /* AppDelegate.swift in Sources */,
 				2D7930F01FDFD92900007C2F /* MainViewController.swift in Sources */,
 			);

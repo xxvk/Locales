@@ -141,6 +141,14 @@ extension Locale{
         }
         return nil
     }
+    func dialingCode() -> String? {
+        if let key: String = regionCode {
+            if let value: String = LocaleHelper.dialingCodes[key] {
+                return value
+            }
+        }
+        return nil
+    }
 }
 
 internal class LocaleHelper {
@@ -424,6 +432,36 @@ internal class LocaleHelper {
         "ZM" : "894" ,
         "ZW" : "716" ,
     ]
+    
+    static let dialingCodes: [String: String] = {
+        var result = [String : String]()
+        let bundle = Bundle.main
+        guard let url = bundle.url(forResource: "Locales", withExtension: "bundle") else {
+            return result
+        }
+        guard let resBundle = Bundle.init(url: url) else {
+            return result
+        }
+        guard let path: String = resBundle.path(forResource: "LocalesDialingCodes", ofType: "plist") else{
+            return result
+        }
+        guard let array = NSArray.init(contentsOfFile: path) else {
+            return result
+        }
+        
+        var countryNames = [String]()
+        var prefixDialingCodes = [String]()
+        var dictDialingCodes = [String]()
+        
+        for obj in array {
+            if let dic: [String : String] = obj as? [String : String] {
+                if let code: String = dic["code"], let dial: String = dic["dial_code"]{
+                    result[code] = dial
+                }
+            }
+        }
+        return result
+    }()
     
     init() {
         print("Country Flags Count: \(LocaleHelper.flags.count)")
