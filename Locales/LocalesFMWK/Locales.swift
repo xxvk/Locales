@@ -133,7 +133,7 @@ extension Locale{
         }
         return nil
     }
-    func regionNumber() -> String? {
+    public func regionNumber() -> String? {
         if let key: String = regionCode {
             if let value: String = LocaleHelper.numbers[key] {
                 return value
@@ -141,13 +141,25 @@ extension Locale{
         }
         return nil
     }
-    func dialingCode() -> String? {
+    public func dialingCode() -> String? {
         if let key: String = regionCode {
             if let value: String = LocaleHelper.dialingCodes[key] {
                 return value
             }
         }
         return nil
+    }
+    public func emojiFlag() -> String? {
+        if regionCode == nil {
+            return nil
+        }
+        return regionCode!.unicodeScalars.map { String(regionalIndicatorSymbol(unicodeScalar: $0)!) } .joined()
+    }
+    private func regionalIndicatorSymbol(unicodeScalar: UnicodeScalar) -> UnicodeScalar? {
+        let uppercaseA = UnicodeScalar("A")!
+        let regionalIndicatorSymbolA = UnicodeScalar("\u{1f1e6}")!
+        let distance = unicodeScalar.value - uppercaseA.value
+        return UnicodeScalar(regionalIndicatorSymbolA.value + distance)
     }
 }
 
